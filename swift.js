@@ -20,7 +20,6 @@
                 const response = await fetch('https://fakestoreapi.com/products');
                 const products = await response.json();
                 
-                // Get top 3 rated products
                 const trending = products
                     .sort((a, b) => b.rating.rate - a.rating.rate)
                     .slice(0, 3);
